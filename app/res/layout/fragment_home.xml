@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:background="#1DA3C9E6"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Available Voting Polls:"
+           android:textColor="@color/black"
+           android:id="@+id/t1"
+           android:gravity="center"
+           android:padding="5dp"/>
+       <com.facebook.shimmer.ShimmerFrameLayout
+           android:layout_width="match_parent"
+           android:id="@+id/shimmer"
+           android:layout_height="match_parent"
+           android:layout_below="@id/t1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_home"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"/>
+                <include layout="@layout/shimmer_home"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"/>
+                <include layout="@layout/shimmer_home"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"/>
+                <include layout="@layout/shimmer_home"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"/>
+
+
+
+            </LinearLayout>
+
+       </com.facebook.shimmer.ShimmerFrameLayout>
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:padding="2dp"
+           android:visibility="gone"
+           android:id="@+id/recyclerview"
+           android:layout_height="match_parent"
+           android:layout_marginBottom="70dp"
+           android:layout_below="@+id/t1"/>
+
+
+   </RelativeLayout>
+</FrameLayout>
